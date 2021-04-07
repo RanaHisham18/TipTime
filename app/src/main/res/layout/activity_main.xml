@@ -1,154 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_shadow_end_color"
-    tools:context=".MainActivity"
+    android:layout_width="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        tools:context=".MainActivity">
 
-    >
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField"
-        android:layout_width="216dp"
-        android:layout_height="90dp"
-        android:hint="@string/cost_of_service"
-        app:layout_constraintBottom_toTopOf="@+id/roundUpSwitch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115"
-        tools:ignore="MissingConstraints">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="216dp"
+            android:layout_height="90dp"
+            android:hint="@string/cost_of_service"
+            app:layout_constraintBottom_toTopOf="@+id/roundUpSwitch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.115"
+            tools:ignore="MissingConstraints">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/cost_of_service_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cost_of_service_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/service_question"
-        android:layout_width="216dp"
-        android:layout_height="42dp"
-        android:text="How was the service?"
-        style="@style/Widget.TipTime.TextView"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textField"
-        app:layout_constraintVertical_bias="0.05" />
+        <TextView
+            android:id="@+id/service_question"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="187dp"
+            android:layout_height="81dp"
+            android:text="How was the service?"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.42"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textField"
+            app:layout_constraintVertical_bias="0.05" />
 
-    <RadioGroup
-        android:id="@+id/tip_options"
-        android:layout_width="163dp"
-        android:layout_height="154dp"
-        android:checkedButton="@id/option_twenty_percent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
-        app:layout_constraintStart_toStartOf="@+id/service_question"
-        app:layout_constraintTop_toBottomOf="@+id/service_question"
-        app:layout_constraintVertical_bias="0.106"
+        <RadioGroup
+            android:id="@+id/tip_options"
+            android:layout_width="163dp"
+            android:layout_height="154dp"
+            android:checkedButton="@id/option_twenty_percent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintStart_toStartOf="@+id/service_question"
+            app:layout_constraintTop_toBottomOf="@+id/service_question"
+            app:layout_constraintVertical_bias="0.106"
 
-        >
+            >
 
-        <RadioButton
-            android:id="@+id/option_twenty_percent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Amazing 20%" />
+            <RadioButton
+                android:id="@+id/option_twenty_percent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amazing 20%" />
 
-        <RadioButton
-            android:id="@+id/option_eighteen_percent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Good 18%" />
+            <RadioButton
+                android:id="@+id/option_eighteen_percent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Good 18%" />
 
-        <RadioButton
-            android:id="@+id/option_fifteen_percent"
-            android:layout_width="321dp"
-            android:layout_height="39dp"
-            android:text="OK 15%" />
+            <Button
+                android:id="@+id/myButton"
+                android:layout_width="266dp"
+                android:layout_height="317dp"
+                android:text="calculate" />
 
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/option_fifteen_percent"
+                android:layout_width="321dp"
+                android:layout_height="39dp"
+                android:text="OK 15%" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/roundUpSwitch"
-        android:layout_width="322dp"
-        android:layout_height="35dp"
-        android:text="Round up tip?"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
+            <TextView
+                android:id="@+id/tipResult"
+                android:layout_width="207dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="88dp"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                tools:text="Tip Amount: $10" />
 
-    <Button
-        android:id="@+id/myButton"
-        android:layout_width="266dp"
-        android:layout_height="54dp"
-        android:text="calculate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/roundUpSwitch"
-        app:layout_constraintTop_toBottomOf="@+id/roundUpSwitch"
-        app:layout_constraintVertical_bias="0.22" />
+        </RadioGroup>
 
-    <TextView
-        android:id="@+id/tipResult"
-        android:layout_width="207dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="88dp"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.859"
-        app:layout_constraintStart_toStartOf="@+id/myButton"
-        app:layout_constraintTop_toBottomOf="@+id/myButton"
-        app:layout_constraintVertical_bias="0.909"
-        tools:text="Tip Amount: $10" />
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/roundUpSwitch"
+            android:layout_width="322dp"
+            android:layout_height="35dp"
+            android:text="Round up tip?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.622"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="74dp"
-        android:layout_height="63dp"
-        android:layout_weight="1"
-        app:layout_constraintBottom_toBottomOf="@+id/textField"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.023"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textField"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_store_24" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="74dp"
+            android:layout_height="63dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="@+id/textField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.023"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textField"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_store_24" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="69dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/service_question"
-        app:layout_constraintEnd_toStartOf="@+id/service_question"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/service_question"
-        app:srcCompat="@drawable/ic_baseline_service_24" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="69dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/service_question"
+            app:layout_constraintEnd_toStartOf="@+id/service_question"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/service_question"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_service_24" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="64dp"
-        android:layout_height="59dp"
-        app:layout_constraintBottom_toBottomOf="@+id/roundUpSwitch"
-        app:layout_constraintEnd_toStartOf="@+id/roundUpSwitch"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/roundUpSwitch"
-        app:srcCompat="@drawable/ic_baseline_call_made_24" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="64dp"
+            android:layout_height="59dp"
+            app:layout_constraintBottom_toBottomOf="@+id/roundUpSwitch"
+            app:layout_constraintEnd_toStartOf="@+id/roundUpSwitch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/roundUpSwitch"
+            app:srcCompat="@drawable/ic_baseline_call_made_24" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

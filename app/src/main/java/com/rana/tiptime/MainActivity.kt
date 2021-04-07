@@ -20,6 +20,18 @@ class MainActivity : AppCompatActivity() {
         // binding.myButton.text = "Calculate Tip"
 
         binding.myButton.setOnClickListener { calculateTip() }
+        //override
+      /*  fun onCreate(savedInstanceState: Bundle?) {
+
+
+            setContentView(binding.root)
+
+            binding.myButton.setOnClickListener { calculateTip() }
+
+            binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode)
+            }
+        }*/
+
 
     }
 
@@ -60,7 +72,16 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
+   /* private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_ENTER) {
+            // Hide the keyboard
+            val inputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+            return true
+        }
+        return false
+    }*/
 
 
 
