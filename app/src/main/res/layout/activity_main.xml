@@ -84,7 +84,7 @@
             android:id="@+id/roundUpSwitch"
             android:layout_width="0dp"
             android:layout_height="35dp"
-            android:text="Round up tip?"
+            android:text="Round up tip? "
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView3"
             app:layout_constraintTop_toBottomOf="@id/tip_options"
